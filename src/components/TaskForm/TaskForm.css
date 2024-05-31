@@ -1,0 +1,20 @@
+.add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.add-task-title {
+  color: aliceblue;
+  font-family: "Bree Serif";
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.add-button {
+  color: aliceblue;
+  background-color: #0004f7;
+  margin-bottom: 15px;
+  font-family: "Courier New", Courier, monospace;
+}

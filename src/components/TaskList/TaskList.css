@@ -1,0 +1,11 @@
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.task-text {
+  color: aliceblue;
+}

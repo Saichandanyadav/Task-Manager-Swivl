@@ -1,0 +1,17 @@
+.task-container {
+  margin: 20px;
+}
+
+.cursor-pointer {
+  color: aliceblue;
+  font-family: cursive;
+  font-size: 30px;
+  margin-right: 40px;
+}
+
+.button {
+  border-radius: 20px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 18px;
+}

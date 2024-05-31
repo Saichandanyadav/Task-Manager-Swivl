@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import TaskList from "./components/TaskList/TaskList";
+import TaskForm from "./components/TaskForm/TaskForm";
+import EditTaskModal from "./components/EditTaskModal/EditTaskModal";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [editingTask, setEditingTask] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App text-center p-4">
+        <h1 className="main-title mb-4">Task Manager</h1>
+        <div className="developer-container">
+          <a
+            href="https://www.linkedin.com/in/saichandanyadav/"
+            target="_blank"
+            className="developer"
+            rel="noreferrer"
+          >
+            Follow Developer
+          </a>
+        </div>
+        <TaskForm />
+        <TaskList onEdit={setEditingTask} />
+        {editingTask && (
+          <EditTaskModal
+            task={editingTask}
+            onClose={() => setEditingTask(null)}
+          />
+        )}
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
